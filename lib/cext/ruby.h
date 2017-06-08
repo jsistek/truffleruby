@@ -34,6 +34,7 @@ extern "C" {
 #include <string.h>
 #include <math.h>
 #include <sys/time.h>
+#include <limits.h>
 
 #include <truffle.h>
 

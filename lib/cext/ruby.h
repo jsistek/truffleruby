@@ -397,6 +397,7 @@ char RB_NUM2CHR(VALUE x);
 #define NUM2CHR(x) RB_NUM2CHR(x)
 int rb_cmpint(VALUE val, VALUE a, VALUE b);
 VALUE rb_int2inum(SIGNED_VALUE n);
+VALUE rb_uint2inum(VALUE n);
 VALUE rb_ll2inum(LONG_LONG n);
 double rb_num2dbl(VALUE val);
 long rb_num2int(VALUE val);

@@ -1695,6 +1695,17 @@ void rb_check_arity(int argc, int min, int max)
 	    rb_tr_error("bad arity"); // TODO (pitr-ch 08-Jun-2017): fix error message
 }
 
+char* ruby_strdup(const char *str)
+{
+    char *tmp;
+    size_t len = strlen(str) + 1;
+
+    tmp = xmalloc(len);
+    memcpy(tmp, str, len);
+
+    return tmp;
+}
+
 // Calls
 
 int rb_respond_to(VALUE object, ID name) {
@@ -2595,17 +2606,4 @@ void *rb_tr_managed_from_handle(void *handle) {
 
 void rb_tr_release_handle(void *handle) {
   truffle_release_handle(handle);
-}
-
-// util
-char *
-ruby_strdup(const char *str)
-{
-    char *tmp;
-    size_t len = strlen(str) + 1;
-
-    tmp = xmalloc(len);
-    memcpy(tmp, str, len);
-
-    return tmp;
 }

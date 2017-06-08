@@ -629,6 +629,11 @@ enum ruby_econv_flag_type {
 #define PRIXVALUE               PRI_VALUE_PREFIX"X"
 #define PRIsVALUE               PRI_VALUE_PREFIX"i" RUBY_PRI_VALUE_MARK
 
+int MBCLEN_NEEDMORE_P(int r);
+int MBCLEN_CHARFOUND_P(int r);
+int MBCLEN_CHARFOUND_LEN(int r);
+int MBCLEN_NEEDMORE_LEN(int r);
+
 char *RSTRING_PTR(VALUE string);
 char *RSTRING_END(VALUE string);
 int rb_str_len(VALUE string);

@@ -513,8 +513,9 @@ module Commands
     project = options.first
     case project
     when 'cexts'
-      no_openssl = options.delete('--no-openssl')
       build_ruby_su
+      cextc "#{TRUFFLERUBY_DIR}/src/main/c/zlib"
+      no_openssl = options.delete('--no-openssl')
       unless no_openssl
         cextc "#{TRUFFLERUBY_DIR}/src/main/c/openssl"
       end

@@ -1014,6 +1014,7 @@ void rb_gc_register_address(VALUE *address);
 #define rb_global_variable(address) ;
 VALUE rb_gc_enable();
 VALUE rb_gc_disable();
+void rb_gc_mark(VALUE ptr);
 
 // Threads
 

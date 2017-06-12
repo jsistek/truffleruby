@@ -716,6 +716,8 @@ module Commands
                     "#{TRUFFLERUBY_DIR}/lib/cext/ruby.su"
                   elsif cext_dir == "#{TRUFFLERUBY_DIR}/src/main/c/openssl"
                     "#{TRUFFLERUBY_DIR}/lib/mri/openssl.su"
+                  elsif cext_dir == "#{TRUFFLERUBY_DIR}/src/main/c/zlib"
+                    "#{TRUFFLERUBY_DIR}/lib/mri/zlib.su"
                   else
                     "#{TRUFFLERUBY_DIR}/test/truffle/cexts/#{gem_name}/lib/#{gem_name}/#{gem_name}.su"
                   end
